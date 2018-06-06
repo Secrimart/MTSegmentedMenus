@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MTSegmentedMenus_Example' do
+  pod 'MTSegmentedMenus', :path => '../'
+
+  target 'MTSegmentedMenus_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
