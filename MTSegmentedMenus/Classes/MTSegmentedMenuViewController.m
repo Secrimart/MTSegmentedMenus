@@ -5,11 +5,11 @@
 //  Created by Jason Li on 2018/6/7.
 //
 
-#import "MTSegmentMenuViewController.h"
+#import "MTSegmentedMenuViewController.h"
 
 @import Masonry;
 
-@interface MTSegmentMenuViewController ()
+@interface MTSegmentedMenuViewController ()
 @property (nonatomic, strong) NSMutableArray *arrayTitles; // array of menu titles
 
 /**
@@ -19,11 +19,11 @@
 
 @end
 
-@implementation MTSegmentMenuViewController
+@implementation MTSegmentedMenuViewController
 
 - (instancetype)initWithTitles:(NSArray<NSString *> *)titles
             itemFormatterBlock:(MTMenuItemFormatterBlock)itemFormatter
-              changedItemBlock:(MTSegmentMenuViewControllerSelectedChangeBlock)itemChanged {
+              changedItemBlock:(MTSegmentedMenuViewControllerSelectedChangeBlock)itemChanged {
     self = [super init];
     
     if (self) {
@@ -32,7 +32,7 @@
         
         self.arrayTitles = [NSMutableArray arrayWithArray:titles];
         
-        self.selectedIndex = MTSegmentMenuViewControllerNoSegment;
+        self.selectedIndex = MTSegmentedMenuViewControllerNoSegment;
         
         self.segmentInsets = UIEdgeInsetsZero;
         
@@ -52,18 +52,18 @@
 }
 
 - (void)toCancelSelected {
-    if (self.selectedIndex != MTSegmentMenuViewControllerNoSegment) {
+    if (self.selectedIndex != MTSegmentedMenuViewControllerNoSegment) {
         MTMenuItem *item = [self.arrayItems objectAtIndex:self.selectedIndex];
         item.selected = NO;
         
-        self.selectedIndex = MTSegmentMenuViewControllerNoSegment;
+        self.selectedIndex = MTSegmentedMenuViewControllerNoSegment;
     }
     
 }
 
 //MARK: - Action
 - (void)toSetSelectedItemIndex:(NSInteger)index selected:(BOOL)selected {
-    if (self.selectedIndex != MTSegmentMenuViewControllerNoSegment) {
+    if (self.selectedIndex != MTSegmentedMenuViewControllerNoSegment) {
         if (self.selectedIndex == index &&
             !selected) {
             // 通知调用者，点击了已经打开的菜单，菜单关闭
@@ -71,7 +71,7 @@
                 self.itemChanged(self.selectedIndex, selected);
             }
             
-            self.selectedIndex = MTSegmentMenuViewControllerNoSegment;
+            self.selectedIndex = MTSegmentedMenuViewControllerNoSegment;
             return;
         }
         

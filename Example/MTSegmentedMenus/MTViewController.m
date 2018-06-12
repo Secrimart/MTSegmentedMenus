@@ -16,10 +16,10 @@
 @property (nonatomic, copy) MTMenuItemFormatterBlock itemFormatter;
 @property (nonatomic, strong) MTMenuItem *item;
 
-@property (nonatomic, strong) MTSegmentMenuViewController *segmentMenu;
+@property (nonatomic, strong) MTSegmentedMenuViewController *segmentMenu;
 @property (nonatomic, strong) UITextField *textField;
 
-@property (nonatomic, strong) MTSegmentMenuViewController *segmentMenu1;
+@property (nonatomic, strong) MTSegmentedMenuViewController *segmentMenu1;
 
 @end
 
@@ -164,16 +164,16 @@
     return _item;
 }
 
-- (MTSegmentMenuViewController *)segmentMenu {
+- (MTSegmentedMenuViewController *)segmentMenu {
     if (_segmentMenu) return _segmentMenu;
-    _segmentMenu = [[MTSegmentMenuViewController alloc] initWithTitles:@[@"12345678901234567",@"menu2",@"menu3"] itemFormatterBlock:self.itemFormatter changedItemBlock:nil];
+    _segmentMenu = [[MTSegmentedMenuViewController alloc] initWithTitles:@[@"12345678901234567",@"menu2",@"menu3"] itemFormatterBlock:self.itemFormatter changedItemBlock:nil];
     
     return _segmentMenu;
 }
 
-- (MTSegmentMenuViewController *)segmentMenu1 {
+- (MTSegmentedMenuViewController *)segmentMenu1 {
     if (_segmentMenu1) return _segmentMenu1;
-    _segmentMenu1 = [[MTSegmentMenuViewController alloc] initWithTitles:@[@"menu1",@"menu2",@"menu3"] itemFormatterBlock:self.itemFormatter changedItemBlock:^(NSInteger index, BOOL selected) {
+    _segmentMenu1 = [[MTSegmentedMenuViewController alloc] initWithTitles:@[@"menu1",@"menu2",@"menu3"] itemFormatterBlock:self.itemFormatter changedItemBlock:^(NSInteger index, BOOL selected) {
         NSLog(@"item index is: %ld, item is: %@",index, selected?@"selected":@"canceled");
     }];
     

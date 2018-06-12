@@ -1,5 +1,5 @@
 //
-//  MTSegmentMenuViewController.h
+//  MTSegmentedMenuViewController.h
 //  Masonry
 //
 //  Created by Jason Li on 2018/6/7.
@@ -9,16 +9,16 @@
 #import "MTMenuItem.h"
 
 enum {
-    MTSegmentMenuViewControllerNoSegment = -1   // Segment index for no selected segment
+    MTSegmentedMenuViewControllerNoSegment = -1   // Segment index for no selected segment
 };
 
-typedef void (^MTSegmentMenuViewControllerSelectedChangeBlock)(NSInteger index, BOOL selected);
+typedef void (^MTSegmentedMenuViewControllerSelectedChangeBlock)(NSInteger index, BOOL selected);
 
-@interface MTSegmentMenuViewController : UIViewController
+@interface MTSegmentedMenuViewController : UIViewController
 
 @property (nonatomic, copy) MTMenuItemFormatterBlock itemFormatter; // a block, to custom item style with property
 
-@property (nonatomic, copy) MTSegmentMenuViewControllerSelectedChangeBlock itemChanged; // a block, called when changed by selection item.
+@property (nonatomic, copy) MTSegmentedMenuViewControllerSelectedChangeBlock itemChanged; // a block, called when changed by selection item.
 
 /**
  Edge insets for this set of menus.
@@ -35,7 +35,7 @@ typedef void (^MTSegmentMenuViewControllerSelectedChangeBlock)(NSInteger index, 
 /**
  Record of index for selected menu item.
  
- Default is `MTSegmentMenuViewControllerNoSegment`
+ Default is `MTSegmentedMenuViewControllerNoSegment`
  */
 @property (nonatomic) NSInteger selectedIndex;
 
@@ -60,7 +60,7 @@ typedef void (^MTSegmentMenuViewControllerSelectedChangeBlock)(NSInteger index, 
 
 - (instancetype)initWithTitles:(NSArray<NSString *> *)titles
             itemFormatterBlock:(MTMenuItemFormatterBlock)itemFormatter
-              changedItemBlock:(MTSegmentMenuViewControllerSelectedChangeBlock)itemChanged;
+              changedItemBlock:(MTSegmentedMenuViewControllerSelectedChangeBlock)itemChanged;
 
 - (void)toResetItemTitle:(NSString *)title atItemIndex:(NSInteger)index;
 
@@ -68,4 +68,4 @@ typedef void (^MTSegmentMenuViewControllerSelectedChangeBlock)(NSInteger index, 
 
 @end
 
-typedef MTSegmentMenuViewController MTSegmentMenus;
+typedef MTSegmentedMenuViewController MTSegmentedMenus;
