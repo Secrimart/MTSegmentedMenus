@@ -247,9 +247,6 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "rstx_reg@aliyun.com";
 				TargetAttributes = {
-					6003F589195388D20070C39A = {
-						DevelopmentTeam = 73Z8M9L4YN;
-					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -490,12 +487,12 @@
 			baseConfigurationReference = 23CBB89F8DFB064F99AA97B2 /* Pods-MTSegmentedMenus_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 73Z8M9L4YN;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MTSegmentedMenus/MTSegmentedMenus-Prefix.pch";
 				INFOPLIST_FILE = "MTSegmentedMenus/MTSegmentedMenus-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zrxd.org.cocoapods.demo.MTSegmentedMenus-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.MTSegmentedMenus-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -506,12 +503,12 @@
 			baseConfigurationReference = FEE97CF85EC58CE13C61F60F /* Pods-MTSegmentedMenus_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 73Z8M9L4YN;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MTSegmentedMenus/MTSegmentedMenus-Prefix.pch";
 				INFOPLIST_FILE = "MTSegmentedMenus/MTSegmentedMenus-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zrxd.org.cocoapods.demo.MTSegmentedMenus-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.MTSegmentedMenus-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
