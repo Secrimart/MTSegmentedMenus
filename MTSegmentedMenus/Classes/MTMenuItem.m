@@ -209,15 +209,16 @@
     [self toChangedItemBackgroundColor];
     [self toChangeTitleColor];
     
-    if (self.imgIndicator &&
-        self.rotationIndicatorEnable) {
+    if (self.imgIndicator) {
         if (self.imgIndicatorSelected && selected) {
             [self.imageViewIndicator setImage:self.imgIndicatorSelected];
         } else if (self.imgIndicatorSelected && !selected) {
             [self.imageViewIndicator setImage:self.imgIndicator];
         }
         
-        [self toRotationIndicator];
+        if (self.rotationIndicatorEnable) {
+            [self toRotationIndicator];
+        }
     }
 }
 
