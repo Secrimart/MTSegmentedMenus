@@ -173,8 +173,8 @@
 
 - (MTSegmentedMenuViewController *)segmentMenu1 {
     if (_segmentMenu1) return _segmentMenu1;
-    _segmentMenu1 = [[MTSegmentedMenuViewController alloc] initWithTitles:@[@"menu1",@"menu2",@"menu3"] itemFormatterBlock:self.itemFormatter changedItemBlock:^(NSInteger index, BOOL selected) {
-        NSLog(@"item index is: %ld, item is: %@",index, selected?@"selected":@"canceled");
+    _segmentMenu1 = [[MTSegmentedMenuViewController alloc] initWithTitles:@[@"menu1",@"menu2",@"menu3"] itemFormatterBlock:self.itemFormatter changedItemBlock:^(NSInteger cancelIndex, NSInteger selectIndex) {
+        NSLog(@"cancel item index is: %ld, select item index is: %ld",cancelIndex, selectIndex);
     }];
     
     _segmentMenu1.segmentInsets = UIEdgeInsetsMake(8.f, 0.f, 8.f, 0.f);

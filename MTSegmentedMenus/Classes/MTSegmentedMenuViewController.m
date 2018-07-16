@@ -68,7 +68,7 @@
             !selected) {
             // 通知调用者，点击了已经打开的菜单，菜单关闭
             if (self.itemChanged) {
-                self.itemChanged(self.selectedIndex, selected);
+                self.itemChanged(self.selectedIndex, MTSegmentedMenuViewControllerNoSegment);
             }
             
             self.selectedIndex = MTSegmentedMenuViewControllerNoSegment;
@@ -80,12 +80,7 @@
             MTMenuItem *item = [self.arrayItems objectAtIndex:self.selectedIndex];
             item.selected = NO;
             if (self.itemChanged) {
-                self.itemChanged(self.selectedIndex, NO);
-            }
-            
-            // 通知调用者打开目标菜单
-            if (self.itemChanged) {
-                self.itemChanged(index, selected);
+                self.itemChanged(self.selectedIndex, index);
             }
             
             // 设置当前选择的菜单
@@ -96,7 +91,7 @@
     
     // 通知调用者打开目标菜单
     if (self.itemChanged) {
-        self.itemChanged(index, selected);
+        self.itemChanged(self.selectedIndex, index);
     }
     
     // 设置当前选择的菜单

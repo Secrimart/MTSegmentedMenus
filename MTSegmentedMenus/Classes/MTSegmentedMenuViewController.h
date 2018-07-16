@@ -12,7 +12,7 @@ enum {
     MTSegmentedMenuViewControllerNoSegment = -1   // Segment index for no selected segment
 };
 
-typedef void (^MTSegmentedMenuViewControllerSelectedChangeBlock)(NSInteger index, BOOL selected);
+typedef void (^MTSegmentedMenuViewControllerSelectedChangeBlock)(NSInteger cancelIndex, NSInteger selectIndex);
 
 @interface MTSegmentedMenuViewController : UIViewController
 

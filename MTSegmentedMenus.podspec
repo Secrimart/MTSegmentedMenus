@@ -8,13 +8,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MTSegmentedMenus'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'The view controller for segmented menus.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
+#   * Write the description between the DESC de limiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
