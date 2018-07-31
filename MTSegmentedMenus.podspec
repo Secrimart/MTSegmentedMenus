@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-The view controller for segmented menus. Tap menu to cancel selected-state. When the menu is switched, the change block is called two times.
+The view controller for segmented menus. Tap menu to cancel selected-state.
                        DESC
 
   s.homepage         = 'https://github.com/Secrimart/MTSegmentedMenus'
